@@ -19,7 +19,7 @@ apt-get update && apt-get upgrade -y --force-yes
 apt-get install -y lsb-release
 
 #IPTables
-resources/iptables.sh
+#resources/iptables.sh
 
 #sngrep
 resources/sngrep.sh
@@ -34,7 +34,7 @@ resources/nginx.sh
 resources/php.sh
 
 #Fail2ban
-resources/fail2ban.sh
+#resources/fail2ban.sh
 
 #FreeSWITCH
 resources/switch.sh
@@ -54,7 +54,7 @@ if [ ."$php_version" = ."7" ]; then
         systemctl restart php7.0-fpm
 fi
 systemctl restart nginx
-systemctl restart fail2ban
+#systemctl restart fail2ban
 
 #add the database schema, user and groups
 resources/finish.sh
